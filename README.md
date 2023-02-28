@@ -1,14 +1,10 @@
----
-title: "PQ_WORDS: A dictionary for games"
----
-
 I made a thing! One that others might like as well: a library of **word lists**. Use them for word games. Use them to quickly prototype new ideas or generate random words / concepts for inspiration. Use them for a spelling contest. Use them however you like!
-
-You can find the project on GitHub: \<@TODO: Link\>
 
 You can see it in effect in a game like [That's Amorphe](https://pandaqi.com/thats-amorphe). On the website, you can generate a PDF with word cards, which you can print and use for playing. Those words are, obviously, drawn directly from these word lists.
 
 It also powers my [Dictionary Tool](https://pandaqi.com/tools/dictionary/). It's useful when you play one of my word games---like [Keebble](https://pandaqi.com/keebble)---to check _if something is a valid word_. You know, the thing that starts all lively discussions in Scrabble-like games :p
+
+_Current word count: ~6,000_
 
 ## What is it?
 
@@ -38,7 +34,7 @@ I've included a small JavaScript file to collect and query them. This "library" 
 
 Here's an example.
 
-{{< highlight javascript >}}
+```
 async function getXRandomWords(num)
 {
   const params = { "useAll": true }
@@ -52,7 +48,7 @@ async function getXRandomWords(num)
 }
 
 getXRandomWords();
-{{< /highlight >}}
+```
 
 ### PQ_WORDS
 
@@ -152,16 +148,24 @@ I've included a simple command-line tool (written in Rust) to easily update or m
 * Place the `.exe` in the root of the words project
 * Open a command line, move to that root
 
-Now you can type `pqwordshelper `, followed by ...
+Now you can type `pqwordshelper `, followed by a **command**.
 
 * `-c readfile` => to read the content of a specific file
-* `-c addword -w <word>` => to add a new word
+* `-c addword` => to add a new word
 * `-c createfile` => to create a new file
 * `-c removeduplicates` => to both sort and remove unnecessary whitespace/duplicates
 * `-c printvaluelist` => prints all possible categories in a list. (Similarly, `printvaluestring` prints them as a single string.) I copy the result of this to my JavaScript file to ensure it knows about all possible categories.
 
 After typing the line, it asks you for the necessary info (one at a time): which category, what filename, etcetera.
 
+If you want to add many words with the same metadata, you can fix those at the start. For example,
+
+```
+pqwordshelper -c addword -type nouns -category animals
+```
+
+Now it will only ask you for the level (easy, medium, ...) and the word each time.
+
 It always creates a backup beforehand in a `_backup` folder. On top of that, I've added checks against corruption or accidental deletion---but still, use with caution.
 
-(Yes, `c` for "command" and `-w` for word. It's my first command line tool---in Rust no less---go easy on me :p)
+(Feedback? Tell me. It's my first command line tool---and in Rust no less.)
