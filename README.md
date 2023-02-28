@@ -18,6 +18,8 @@ This is not an exhaustive list. The library will grow as I make more of these ga
 
 I split _geography_ and _proper names_ into their own word types. Some players don't like having real-life names in games like these, or a project can't use them. Including them with the _nouns_ has more cons than pros. (They are also most likely to be unknown or outdated.)
 
+The categories **verbs**, **adjectives** and **adverbs** are **not implemented yet**. They will be, when I make my word game that needs them. But there's no clear timeline on that. (@TODO)
+
 ## Usage
 
 You can use this any way you like. But it was mostly meant to be used in some digital system (such as a website), so I'll explain more about that below.
