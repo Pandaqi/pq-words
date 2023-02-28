@@ -1,0 +1,88 @@
+acorn
+acre
+alfalfa
+ant hill
+area
+atoll
+bamboo
+bark
+bay
+beehive
+bird's nest
+brush
+bud
+bush
+cane
+canyon
+cape
+cave
+channel
+cherry tree
+chestnut
+cliff
+clover
+cold
+coral
+cornfield
+cove
+creek
+crow's nest
+daisy
+dam
+drought
+dyke
+earthquake
+equator
+fern
+fir
+fjord
+flower box
+flowerpot
+frost
+grapevine
+grove
+hedge
+herb
+ivy
+landfill
+landscape
+lemon peel
+lily
+log
+maple
+marsh
+moss
+nectar
+oak
+oasis
+olive branch
+peak
+petal
+pine
+pit
+pollen
+pond
+prairie
+reed
+reeds
+reef
+river bed
+root
+rosebud
+safari
+sandbank
+shrub
+stem
+stream
+swamp
+tide
+tropics
+tulip
+tundra
+uninhabited island
+valley
+vine
+wallflower
+waves
+weed
+wetland

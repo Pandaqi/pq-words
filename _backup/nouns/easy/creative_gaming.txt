@@ -1,0 +1,33 @@
+action
+adventure
+animation
+explosion
+flight
+game
+game console
+grenade
+headset
+horror
+joke
+joystick
+lag
+level
+lottery
+map
+mobile game
+model
+multiplayer
+pacman
+platform
+player
+racing game
+reward
+rocket
+secret door
+shooter
+spam
+sport
+touch screen
+vehicle
+weapon
+zombie

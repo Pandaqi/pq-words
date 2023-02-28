@@ -1,0 +1,9 @@
+bridge
+hotel
+map
+pilot
+sidewalk
+stoplight
+traffic light
+traffic sign
+tunnel

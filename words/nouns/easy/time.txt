@@ -1,0 +1,20 @@
+afternoon
+age
+calendar
+century
+classic
+culture
+date
+day
+evening
+full moon
+history
+hour
+minute
+month
+morning
+night
+time
+week
+weekend
+year

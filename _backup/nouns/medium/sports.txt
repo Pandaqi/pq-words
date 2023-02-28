@@ -1,0 +1,57 @@
+base
+beach volleybal
+bobsled
+catch
+champion
+checkmate
+cricket
+darts
+decathlon
+defense
+dugout
+fencing
+free kick
+gear
+guard
+gymnastics
+hide and seek
+high jump
+home
+hoops
+jog
+kayak
+league
+mascot
+minigolf
+offense
+penalty
+pitch
+play
+polo
+punching bag
+quarter
+ride
+rink
+rodeo
+roulette
+skating
+slalom
+slam dunk
+sled
+slot machine
+snowboard
+softball
+squash
+street soccer
+surfboard
+tag
+target
+tee
+tennis shoes
+tie
+tournament
+triathlon
+volley
+weightlifting
+wrestler
+wrestling

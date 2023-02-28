@@ -1,0 +1,7 @@
+antiquity
+artifact
+biography
+chronology
+epoch
+provenance
+time zone

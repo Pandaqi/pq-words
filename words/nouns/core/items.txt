@@ -1,0 +1,9 @@
+battery
+bomb
+coin
+hook
+key
+magnet
+tablet
+trash can
+treasure

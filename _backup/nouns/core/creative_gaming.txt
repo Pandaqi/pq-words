@@ -1,0 +1,9 @@
+card
+controller
+dice
+flag
+gun
+keyboard
+pawn
+puzzle
+robot

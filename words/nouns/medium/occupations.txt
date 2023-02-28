@@ -1,0 +1,69 @@
+accountant
+analyst
+archeologist
+architect
+astronomer
+ballet dancer
+barber
+bartender
+belly dancer
+birdfeeder
+blacksmith
+bouncer
+bus driver
+commander
+curator
+dentist
+economist
+fashion designer
+fire breather
+fitness trainer
+flower girl
+general
+hair stylist
+hairstylist
+handyman
+historian
+housekeeper
+instructor
+journalist
+lawyer
+leader
+librarian
+lifeguard
+locksmith
+maid
+manager
+millionaire
+mime
+mountain climber
+newsboy
+palm reader
+pharmacist
+philosopher
+physical therapist
+planner
+plumber
+politician
+priest
+producer
+professor
+psychologist
+publisher
+receptionist
+scientist
+sheriff
+shop assistant
+smuggler
+specialist
+stewardess
+store manager
+street artist
+sumo wrestler
+technician
+tutor
+veterinarian
+welder
+window washer
+woodward
+zookeeper

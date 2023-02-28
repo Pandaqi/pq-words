@@ -1,0 +1,6 @@
+beige
+cream
+gray
+lime
+magenta
+violet

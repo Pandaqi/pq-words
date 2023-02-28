@@ -1,0 +1,6 @@
+bird
+chicken
+crow
+duck
+owl
+penguin

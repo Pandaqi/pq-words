@@ -1,0 +1,14 @@
+area
+crescent
+cross
+cylinder
+form
+hexagon
+octagon
+parallelogram
+pentagon
+plane
+polygon
+shape
+sphere
+web

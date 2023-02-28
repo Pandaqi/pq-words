@@ -1,0 +1,13 @@
+biscuit
+bread
+carrot
+cheese
+donut
+egg
+hamburger
+milk
+pasta
+pizza
+potato
+sandwich
+spaghetti

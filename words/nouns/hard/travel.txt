@@ -1,0 +1,25 @@
+barrier
+business trip
+causeway
+cistern
+cloverleaf
+concourse
+conference
+confirmation
+consulate
+contour
+hairpin bend
+itinerary
+layover
+leg
+leisure
+levee
+operator
+parkway
+petrol station
+porter
+rut
+skyway
+terrace
+toll road
+zebra crossing

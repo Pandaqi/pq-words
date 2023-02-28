@@ -1,0 +1,13 @@
+altimeter
+barometer
+binoculars
+blowtorch
+crowbar
+jig
+periscope
+satellite
+sextant
+tachometer
+telescope
+thermometer
+trowel

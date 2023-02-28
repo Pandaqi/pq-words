@@ -1,0 +1,40 @@
+alley
+capital
+chart
+compass
+country
+dam
+delay
+destination
+dot
+driver
+exit
+flight
+gate
+highway
+holiday
+hub
+journey
+lane
+line
+march
+passenger
+passport
+path
+point
+road
+road sign
+roundabout
+seat
+space
+speed bump
+spot
+stop sign
+street
+street lamp
+taxi
+ticket
+tour
+traffic
+travel
+trip

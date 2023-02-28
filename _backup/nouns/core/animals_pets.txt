@@ -1,0 +1,10 @@
+bird
+bunny
+cat
+dog
+hamster
+mouse
+puppy
+rabbit
+rat
+snake

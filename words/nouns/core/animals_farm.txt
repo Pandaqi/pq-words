@@ -1,0 +1,7 @@
+chicken
+cow
+goat
+horse
+lamb
+pig
+sheep

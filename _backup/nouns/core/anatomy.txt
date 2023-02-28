@@ -1,0 +1,8 @@
+arm
+ear
+eye
+face
+hair
+heart
+leg
+nose

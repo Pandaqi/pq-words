@@ -1,0 +1,22 @@
+adapter
+baby monitor
+ceiling fan
+damper
+dishwasher
+extension cord
+fuse
+grill
+heater
+ironing board
+paper shredder
+phone charger
+power strip
+radiator
+remote control
+sensor
+stove
+time machine
+typewriter
+vacuum cleaner
+valve
+ventilator

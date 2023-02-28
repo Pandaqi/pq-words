@@ -1,0 +1,10 @@
+bag
+boot
+glasses
+hat
+headphones
+ring
+shirt
+shoe
+skirt
+sock

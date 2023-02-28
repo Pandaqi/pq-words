@@ -1,0 +1,97 @@
+Milky Way
+abandoned home
+abbey
+arch
+armory
+art gallery
+asylum
+bar
+barn
+barracks
+blood bank
+bomb shelter
+booth
+bunker
+cabin
+campsite
+car dealership
+carousel
+casino
+cathedral
+cell
+cellphone tower
+chapel
+club
+college
+construction site
+convenience store
+cot
+cottage
+courthouse
+crypt
+dance studio
+depot
+derelict warehouse
+diner
+discount store
+dome
+dormitory
+drug store
+dry cleaner
+duck pond
+dump
+elementary school
+embassy
+flea market
+foundry
+front porch
+gallery
+golf course
+graveyard
+greenhouse
+hair salon
+harbor
+hardware store
+heaven
+homeland
+hut
+igloo
+inn
+kiosk
+laundromat
+log cabin
+manor
+mansion
+mine
+moat
+monument
+motel
+nuclear reactor
+nursery
+opera house
+outpost
+parking garage
+petting zoo
+post
+post office
+radio tower
+sculpture
+shed
+shelter
+shipyard
+shopping district
+silo
+skyscraper
+spa
+sphinx
+station
+studio
+summer cottage
+terminal
+town hall
+town square
+tree house
+turret
+vault
+watchtower
+wine shop

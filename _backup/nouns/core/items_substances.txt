@@ -1,0 +1,6 @@
+air
+clay
+diamond
+paper
+stone
+wood

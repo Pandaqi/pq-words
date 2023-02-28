@@ -1,0 +1,11 @@
+bench
+bookcase
+bookshelf
+bureau
+cabinet
+carpet
+cover
+mat
+mirror
+sofa
+stool

@@ -1,0 +1,16 @@
+cone
+curve
+disk
+dodecagon
+edge
+envelope
+face
+fractal
+lattice
+mesh
+metaball
+prism
+rhombus
+surface
+torus
+vertex

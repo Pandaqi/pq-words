@@ -1,0 +1,59 @@
+Olympics
+archer
+arena
+arrow
+athlete
+badminton
+bat
+batter
+bicycle
+bike
+bow
+box
+canoe
+club
+coach
+cycling
+cyclist
+darts
+dive
+diver
+exercise
+fitness
+goal
+goalie
+golfer
+gym
+gymnast
+handball
+helmet
+jumper
+karate
+loser
+mat
+match
+medal
+paddle
+pingpong ball
+player
+pole
+puck
+racer
+referee
+rower
+rowing
+sail
+skateboard
+skier
+skiing
+snowboard
+soccer field
+soccer goal
+sport
+stadium
+stick
+team
+tennis racket
+weight
+winner
+world cup

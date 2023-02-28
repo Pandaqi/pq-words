@@ -1,0 +1,13 @@
+bass
+beat
+chord
+key
+major
+melody
+minor
+note
+octave
+pitch
+rhythm
+scale
+tempo

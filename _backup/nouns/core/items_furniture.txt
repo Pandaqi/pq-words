@@ -1,0 +1,6 @@
+bath
+bed
+chair
+couch
+desk
+table

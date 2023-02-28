@@ -1,0 +1,7 @@
+banquette
+chaise
+hearth
+ottoman
+pouf
+sectional
+settee

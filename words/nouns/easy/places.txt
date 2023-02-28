@@ -1,0 +1,62 @@
+amusement park
+apartment
+arena
+barn
+bungalow
+cabin
+cafeteria
+café
+camp
+camping
+church
+circus
+city
+country
+disco
+elevator
+factory
+fence
+fort
+fortress
+fountain
+grocery store
+gym
+hall
+hangar
+haunted house
+highway
+hostel
+hut
+jail
+keep
+laboratory
+lighthouse
+mill
+mosque
+museum
+office
+outer space
+park
+pharmacy
+power plant
+prison
+restaurant
+rollercoaster
+shed
+shopping mall
+sky
+stable
+stadium
+state
+station
+statue
+swimming pool
+temple
+tent
+theatre
+theme park
+tower
+town
+university
+villa
+world

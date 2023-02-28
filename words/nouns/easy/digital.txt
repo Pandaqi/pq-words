@@ -1,0 +1,44 @@
+alert
+antenna
+app
+browser
+button
+camera
+click
+client
+code
+command
+comment
+data
+design
+document
+download
+error
+filter
+game
+headset
+market
+message
+mobile
+model
+page
+phone number
+phone skin
+pixel
+popup
+ringtone
+search engine
+software
+startup
+stream
+team
+text
+timer
+touch
+traffic
+upload
+url
+user
+voice
+wallpaper
+wireless

@@ -1,0 +1,30 @@
+ankle
+back
+beard
+big toe
+body
+bone
+brain
+cheek
+chin
+elbow
+eyebrow
+finger
+first aid
+fist
+forehead
+frown
+head
+knee
+lip
+lung
+mouth
+nail
+neck
+pregnant
+smile
+stomach
+tail
+tattoo
+toe
+tooth

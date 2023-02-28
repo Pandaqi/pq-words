@@ -1,0 +1,7 @@
+broom
+chalk
+eraser
+paintbrush
+paper
+stick
+toothbrush

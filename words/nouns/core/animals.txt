@@ -1,0 +1,10 @@
+bat
+bear
+camel
+dinosaur
+elephant
+fish
+giraffe
+human
+kangaroo
+panda

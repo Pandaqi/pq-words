@@ -1,0 +1,19 @@
+airway
+arch
+archway
+balcony
+column
+footing
+frame
+gallery
+hearth
+molding
+panel
+pavilion
+pedestal
+porch
+roof terrace
+scaffold
+spire
+terrace
+veranda

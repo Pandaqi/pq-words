@@ -1,0 +1,16 @@
+axis
+base
+brightness
+center
+circuit
+coordinate
+electricity
+grid
+halo
+height
+mean
+median
+midpoint
+perimeter
+safety goggles
+symmetry

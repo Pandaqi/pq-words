@@ -1,0 +1,44 @@
+baggage
+band aid
+basket
+bowl
+box
+bucket
+button
+cable
+can
+carton
+case
+cask
+chest
+container
+cup
+envelope
+file
+glass
+jar
+lamp
+laundry
+lid
+light
+light bulb
+link
+lucifer
+mail
+notepad
+pocket
+pomp
+pot
+pouch
+sack
+shower
+sponge
+tea spoon
+teapot
+telephone
+tissue
+toilet paper
+towel
+trash can
+tube
+water bottle

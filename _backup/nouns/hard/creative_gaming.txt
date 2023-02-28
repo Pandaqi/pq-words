@@ -1,0 +1,16 @@
+DLC
+FPS
+HUD
+control scheme
+key bind
+king of clubs
+king of diamonds
+king of hearts
+king of spades
+plasma
+queen of clubs
+queen of diamonds
+queen of hearts
+queen of spades
+texture
+trigger

@@ -1,0 +1,13 @@
+calorie
+decibel
+degree
+foot
+gram
+joule
+light
+meter
+mirror
+reflection
+second
+volt
+watt

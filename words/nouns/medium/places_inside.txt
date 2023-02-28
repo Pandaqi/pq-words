@@ -1,0 +1,5 @@
+attic
+cellar
+hotel room
+pantry
+waiting room

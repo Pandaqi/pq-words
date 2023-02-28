@@ -1,0 +1,9 @@
+champagne
+cider
+gin
+liquor
+rum
+scotch
+tequila
+vodka
+whisky

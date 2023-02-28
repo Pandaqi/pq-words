@@ -1,0 +1,9 @@
+battery
+camera
+flashlight
+lamp
+laptop
+phone
+robot
+screen
+television

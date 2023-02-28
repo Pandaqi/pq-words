@@ -1,0 +1,53 @@
+a cappella
+ambient noise
+aria
+auxiliary
+ballroom dance
+bassoon
+bongo
+bugle
+bus
+cache
+celesta
+coda
+compression
+compressor
+convolution
+copy
+crescendo
+duplet
+dynamic
+envelope
+equalizer
+formant
+gain
+glide
+gong
+inflection
+interference
+limiter
+marimba
+midi
+modulation
+mono
+notation
+oboe
+overture
+pad
+panning
+piccolo
+saxophone
+segue
+stager
+stereo
+sting
+string quartet
+sweeper
+timpani
+triplet
+trombone
+tuba
+tube
+vibes
+vocoder
+xylophone

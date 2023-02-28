@@ -1,0 +1,5 @@
+bathroom
+bedroom
+kitchen
+stairs
+toilet

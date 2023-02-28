@@ -1,0 +1,18 @@
+albatross
+barn owl
+bird of prey
+cuckoo
+finch
+flamingo
+fowl
+goldfinch
+goose
+house sparrow
+jay
+macaw
+parakeet
+pelican
+quail
+stork
+toucan
+vulture

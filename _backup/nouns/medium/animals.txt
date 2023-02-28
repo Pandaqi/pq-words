@@ -1,0 +1,73 @@
+anteater
+badger
+beehive
+bison
+blowfish
+boa
+boar
+buck
+buffalo
+bull
+carp
+chameleon
+cheetah
+chihuahua
+chimpanzee
+clownfish
+cobra
+dairy cow
+dog biscuit
+eel
+empty nest
+ferret
+field mouse
+flamingo
+flying squirrel
+fur
+golden retriever
+hedgehog
+hippo
+hound
+husky
+leopard
+litter box
+lizard
+llama
+lobster
+lynx
+mammal
+meerkat
+mule
+octopus
+ostrich
+ox
+panther
+pelican
+piranha
+platypus
+polar bear
+police dog
+pug
+puma
+python
+racehorse
+racoon
+rhino
+rooster
+salamander
+salmon
+sandcrab
+scorpion
+seahorse
+seal
+shepherd
+squid
+squirrel
+stingray
+terrier
+toad
+unicorn
+viper
+walrus
+werewolf
+wolverine

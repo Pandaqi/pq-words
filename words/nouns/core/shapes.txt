@@ -1,0 +1,15 @@
+arrow
+circle
+cube
+cylinder
+diamond
+ellipse
+heart
+hexagon
+point
+polygon
+pyramid
+sphere
+square
+star
+triangle

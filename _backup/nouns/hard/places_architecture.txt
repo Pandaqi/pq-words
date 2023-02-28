@@ -1,0 +1,25 @@
+arcade
+baluster
+balustrade
+bay window
+belvedere
+brace
+bracket
+breezeway
+colonnade
+cornice
+courtyard
+cupola
+facade
+frieze
+parapet
+patio
+pediment
+pergola
+pilaster
+portico
+projection
+roundel
+setback
+truss
+turret

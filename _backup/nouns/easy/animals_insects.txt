@@ -1,0 +1,8 @@
+ant
+bug
+firefly
+insect
+ladybug
+moth
+snail
+wasp

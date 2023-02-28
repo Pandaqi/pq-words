@@ -1,0 +1,77 @@
+amphibian
+anchovy
+antelope
+armadillo
+barracuda
+bighorn sheep
+biped
+bird bath
+boa constrictor
+border collie
+carrier pigeon
+catfish
+chicken coop
+chinchilla
+chipmunk
+civet
+cobbler
+cod
+codfish
+corgi
+cougar
+coyote
+dachshund
+dingo
+electric eel
+elk
+emu
+flea collar
+fossa
+great white shark
+herring
+hippopotamus
+humpback whale
+impala
+komodo dragon
+mackerel
+mamba
+mandrill
+marlin
+meerkat
+ocelot
+opossum
+osprey
+pack mule
+pheasant
+polecat
+prairie dog
+puffin
+quail
+rainbow trout
+ray
+rhinoceros
+rottweiler
+runt
+sardine
+sea pike
+sea urchin
+serval
+sheep dog
+shrew
+skua
+skunk
+sloth
+sport whale
+stoat
+sunfish
+swordfish
+tadpole
+tree frog
+trout
+tuna
+water buffalo
+wildcat
+wombat
+woolly mammoth
+wooly mammoth
+yak

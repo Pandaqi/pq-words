@@ -1,0 +1,15 @@
+aircraft
+bicycle
+bumper
+fire engine
+garbage truck
+helicopter
+motorcycle
+sailboat
+school bus
+tank
+taxi cab
+tractor
+van
+wheel
+wheelchair

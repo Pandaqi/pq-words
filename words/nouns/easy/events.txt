@@ -1,0 +1,4 @@
+accident
+birth
+birthday
+wedding

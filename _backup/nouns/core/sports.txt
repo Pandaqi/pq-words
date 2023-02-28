@@ -1,0 +1,26 @@
+baseball
+basketball
+board
+bowling
+card
+cheerleader
+chess
+dice
+field
+football
+frisbee
+game
+golf
+hockey
+ice hockey
+judo
+net
+ping pong
+race
+shot
+soccer
+surfer
+swimmer
+table tennis
+tennis
+volleyball

@@ -1,0 +1,48 @@
+aqueduct
+atlas
+avenue
+border
+boulevard
+bus stop
+carrier
+chair lift
+checkout
+cobblestone
+continent
+crosswalk
+cruise
+cruise ship
+curb
+curve
+drawbridge
+drive
+fare
+ferry
+freeway
+globe
+gutter
+honeymoon
+intersection
+legend
+loop
+motorway
+nation
+overpass
+pass
+ramp
+rate
+region
+roadway
+safari
+shipwreck
+space travel
+speed bump
+submarine
+suite
+track
+trail
+transfer
+transit
+tunnel
+underpass
+viaduct

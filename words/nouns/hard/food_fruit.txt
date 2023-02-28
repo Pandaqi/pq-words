@@ -1,0 +1,12 @@
+apricot
+cantaloupe
+citron
+date
+fig
+guava
+mulberry
+nectarine
+papaya
+plum
+prune
+tangerine

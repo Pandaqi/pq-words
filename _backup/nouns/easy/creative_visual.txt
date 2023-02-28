@@ -1,0 +1,61 @@
+agent
+assistant
+backstory
+banner
+blur
+border
+brightness
+caption
+cinema
+circle
+clapper
+comic book
+composer
+costume
+darkness
+decorator
+design
+designer
+director
+editor
+file
+film
+film extra
+film prop
+film score
+film set
+filter
+fluid
+font
+frame
+fur
+graph
+gravity
+guide
+horizon
+image
+landscape
+life
+line
+logo
+loop
+music
+pixel
+plot
+portrait
+poster
+printer
+reader
+rectangle
+scan
+shadow
+sheet
+smoke
+square
+stage prop
+storyboard
+stunt
+stunt double
+text
+video clip
+wardrobe

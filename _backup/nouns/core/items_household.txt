@@ -1,0 +1,13 @@
+backpack
+bag
+bin
+blanket
+bottle
+candle
+clock
+door
+pan
+pillow
+plate
+rope
+vase

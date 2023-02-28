@@ -1,0 +1,15 @@
+beetle
+blowfly
+bumblebee
+caterpillar
+centipede
+cockroach
+cocoon
+dragonfly
+fruit fly
+grasshopper
+inchworm
+leech
+queen bee
+roly-poly
+tapeworm

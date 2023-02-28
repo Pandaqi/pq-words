@@ -1,0 +1,14 @@
+basement
+beam
+bubble bath
+dressing room
+elevator
+escalator
+floor
+garage
+ground
+hole
+living room
+room
+tower
+wall

@@ -1,0 +1,20 @@
+baker
+clown
+cook
+cowboy
+doctor
+farmer
+musician
+ninja
+photographer
+police officer
+prince
+princess
+queen
+singer
+soldier
+superhero
+teacher
+thief
+witch
+writer

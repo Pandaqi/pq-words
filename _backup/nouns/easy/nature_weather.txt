@@ -1,0 +1,12 @@
+autumn
+hail
+meteor
+rainwater
+season
+spring
+storm
+summer
+sunrise
+sunset
+thunder
+winter

@@ -1,0 +1,24 @@
+UFO
+ambulance
+bulldozer
+bumper cars
+cabrio
+cockpit
+engine
+ferry
+golf cart
+ice cream truck
+jeep
+limousine
+motorcycle
+scooter
+shipwreck
+shuttle
+sleigh
+snow scooter
+station wagon
+steamship
+submarine
+tow truck
+tram
+wagon
