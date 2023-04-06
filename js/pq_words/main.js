@@ -1,3 +1,8 @@
+import WordMetadata from "./wordMetadata";
+import WordData from "./wordData";
+import WordDataList from "./wordDataList";
+
+
 window.PQ_WORDS = {
 
     jsonCache: {},
@@ -59,7 +64,7 @@ window.PQ_WORDS = {
         return (key in this.txtCache);
     },
 
-    constructListFromKeys: function(keys)
+    constructListFromKeys: function(keys, params)
     {
         this.list = [];
         for(const key of keys)
@@ -70,6 +75,8 @@ window.PQ_WORDS = {
             const words = allData.splitWordsIntoSeparateEntries();
             for(const word of words)
             {
+                if(word.length < params.minWordLength) { continue; }
+                if(word.length > params.maxWordLength) { continue; }
                 this.list.push(word);
             }
         }
@@ -78,7 +85,7 @@ window.PQ_WORDS = {
     },
 
     // @IMPROV: is there are more neat/general way to implement this? Also for "convertListToHierarchy"?
-    constructListFromQueries: function(queries)
+    constructListFromQueries: function(queries, params)
     {
         this.list = [];
         for(const query of queries)
@@ -88,12 +95,15 @@ window.PQ_WORDS = {
             if(!this.safeCheckHierarchy(this.jsonCache, [t,l,c,s])) { continue; }
 
             const allData = this.jsonCache[t][l][c][s];
-            const md = new PQ_WORDS.WordMetadata();
+            const md = new WordMetadata();
             md.setFromObject(query);
 
             for(const word of allData)
             {
-                const wordData = new PQ_WORDS.WordData();
+                if(word.length < params.minWordLength) { continue; }
+                if(word.length > params.maxWordLength) { continue; }
+
+                const wordData = new WordData();
                 wordData.setWord(word);
                 wordData.setMetadata(md);
                 this.list.push(wordData);
@@ -348,6 +358,9 @@ window.PQ_WORDS = {
             params.categories = this.allCategories;
         }
 
+        params.minWordLength = params.minWordLength || 0;
+        params.maxWordLength = params.maxWordLength || 50;
+
         const types = params.types || this.defaultType;
         const levels = params.levels || this.defaultLevel;
         if(params.useAllLevelsBelow)
@@ -363,7 +376,7 @@ window.PQ_WORDS = {
         let categories = defaultCategories;
         let specificCategoriesSet = params.categories && params.categories.length > 0;
         let useSpecificCategories = specificCategoriesSet && !params.useAllCategories;
-        if(useSpecificCategories) { categories = params.categories; }
+        if(useSpecificCategories) { categories = params.categories.slice(); }
 
         if(params.useAllSubcat)
         {
@@ -409,13 +422,13 @@ window.PQ_WORDS = {
         const method = params.method || "json";
 
         if(method == "json"){
-            await this.loadJsonWithQueries(path, queryList);
+            await this.loadJsonWithQueries(path, queryList, params);
         } else if(method == "txt") {
-            await this.loadTxtWithQueries(path, queryList);
+            await this.loadTxtWithQueries(path, queryList, params);
         }
     },
 
-    async loadJsonWithQueries(path, queryList)
+    async loadJsonWithQueries(path, queryList, params)
     {
 
         if(!this.jsonFileLoaded())
@@ -423,10 +436,10 @@ window.PQ_WORDS = {
             await this.loadJsonFile(this.getJsonFilePath(path));
         }
 
-        this.constructListFromQueries(queryList);
+        this.constructListFromQueries(queryList, params);
     },
 
-    async loadTxtWithQueries(path, queryList)
+    async loadTxtWithQueries(path, queryList, params)
     {
         const promises = [];
         const keys = [];
@@ -435,10 +448,10 @@ window.PQ_WORDS = {
         {
             const filePath = this.getTxtFilePath(path, query);
             
-            const md = new PQ_WORDS.WordMetadata();
+            const md = new WordMetadata();
             md.setFromObject(query);
 
-            const data = new PQ_WORDS.WordDataList();
+            const data = new WordDataList();
             data.setMetadata(md);
             keys.push(filePath);
 
@@ -447,7 +460,7 @@ window.PQ_WORDS = {
         }
 
         await promise; // Promise.all(promises) would've worked as well, just wanted to learn this other approach
-        this.constructListFromKeys(keys);
+        this.constructListFromKeys(keys, params);
     },
 
     fileExists: function(url) {
@@ -483,7 +496,7 @@ window.PQ_WORDS = {
             xhr.onloadend = () => {
                 if(xhr.status == 404) { resolve(false); return; }
                 if(xhr.status == 200) {
-                    const parsedData = PQ_WORDS.parseTxtFile(xhr.response);
+                    const parsedData = this.parseTxtFile(xhr.response);
                     wordData.setWords(parsedData);
                     that.addToTxtCache(filePath, wordData);
                     resolve(true);
@@ -534,84 +547,5 @@ window.PQ_WORDS = {
             arr.push(cat);
         }
         return arr.join(joiner);
-    },
-    
-    WordMetadata: class WordMetadata {
-        set(type, level, cat, subcat)
-        {
-            this.type = type;
-            this.level = level;
-            this.cat = cat;
-            this.subcat = subcat;
-        }
-
-        setFromObject(obj)
-        {
-            this.set(obj.type, obj.level, obj.cat, obj.subcat);
-        }
-
-        getCategory()
-        {
-            return this.cat
-        }
-
-        getSubCategory()
-        {
-            return this.subcat;
-        }
-
-        getFullCategory(nice = true)
-        {
-            let str = this.cat
-            if(this.subcat != "general") { 
-                if(nice) { str += " (" + this.subcat + ")"; }
-                else { str += "_" + this.subcat; }
-            }
-            return str;
-        }
-
-        prettyPrint()
-        {
-            return [this.type, this.level, this.cat, this.subcat].join(", ");
-        }
-    },
-
-    WordDataList: class WordData {
-        constructor() 
-        {
-            this.words = [];
-            this.metadata = null;
-        }
-
-        setMetadata(md) { this.metadata = md; }
-        setWords(words) { this.words = words; }
-        splitWordsIntoSeparateEntries()
-        {
-            const arr = [];
-            for(const wordData of this.words)
-            {
-                const data = new PQ_WORDS.WordData();
-                data.setWord(wordData);
-
-                const md = new PQ_WORDS.WordMetadata();
-                data.setMetadata(this.metadata);
-                arr.push(data);
-            }
-            return arr;
-        }
-    },
-
-    WordData: class WordData {
-        constructor()
-        {
-            this.word = "";
-            this.metadata = null;
-        }
-
-        is(word) { return this.word == word; }
-        setWord(word) { this.word = word; }
-        getWord() { return this.word; }
-        setMetadata(md) {  this.metadata = md; }
-        getMetadata() { return this.metadata; }
     },
 }
