@@ -12,3 +12,4 @@ living room
 room
 tower
 wall
+classroom

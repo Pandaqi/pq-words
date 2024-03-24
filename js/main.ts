@@ -2,43 +2,87 @@ import WordMetadata from "./wordMetadata";
 import WordData from "./wordData";
 import WordDataList from "./wordDataList";
 
+const CATEGORIES =
+{
+    geography: ["cities", "countries", "locations", "planets"],
+    names: ["business", "clothes", "creative_gaming", "creative_visual", "creative_writing", "digital", "food", "holidays", "items_appliances", "music", "people", "religion", "science", "sports", "travel", "vehicles", "general"],
+    nouns: ["anatomy", "animals", "animals_birds", "animals_farm", "animals_insects", "animals_pets", "business", "clothes", "colors", "continents", "creative_gaming", "creative_visual", "creative_writing", "digital", "events", "food", "food_beverages", "food_fruit", "food_sweets", "general", "holidays", "items", "items_appliances", "items_furniture", "items_household", "items_substances", "items_tools", "items_toys", "military", "music", "music_theory", "nature", "nature_weather", "occupations", "people", "places", "places_architecture", "places_inside",  "religion", "science", "science_chemistry", "science_physics", "shapes", "sports", "time", "travel", "vehicles"],
+    adverbs: ["certainty", "conjunctive", "degree", "frequency", "interrogative", "manner", "place", "relative", "time"],
+    adjectives: ["age", "article", "character", "color", "comparative", "demonstrative", "difference", "distributive", "emotions", "material", "numbers", "opinion", "origin", "possessive", "predeterminer", "quantifier", "ranking", "shape", "size", "superlative", "technology","temperature" ],
+    verbs: ["auxiliary", "basic", "dynamic", "intransitive", "linking", "movement", "phrasal", "stative", "transitive"],
+    pronouns: ["pronouns"],
+    prepositions: ["movement", "place", "time"]
+}
 
-window.PQ_WORDS = {
+const ALL_CATEGORIES = new Set();
+for(const [key,data] of Object.entries(CATEGORIES))
+{
+    for(const val of data)
+    {
+        ALL_CATEGORIES.add(val);
+    }
+}
 
-    jsonCache: {},
-    txtCache: {},
-    list: [],
+interface Query 
+{
+    cat?:string
+    subcat?:string
+    type?:string
+    level?:string
+}
+
+interface LoadParams
+{
+    path?: string;
+    useAll?: boolean;
+    types?: string[];
+    levels?: string[];
+    categories?: string[];
+    useAllLevelsBelow?: boolean;
+    useAllCategories?: boolean;
+    useAllSubcat?: boolean;
+    typeExceptions?: string[];
+    categoryExceptions?: string[];
+    method?: string;
+    minWordLength?:number
+    maxWordLength?:number
+}
+
+class PandaqiWords {
+
+    jsonCache:Record<string,any> = {}
+    txtCache:Record<string,any> = {}
+    list:WordData[] = []
     
-    allCategories: 
-    ["anatomy", "animals", "animals_birds", "animals_farm", "animals_insects", "animals_pets", "business", "cities", "clothes", "colors", "continents", "countries", "creative_gaming", "creative_visual", "creative_writing", "digital", "events", "food", "food_beverages", "food_fruit", "food_sweets", "general", "holidays", "items", "items_appliances", "items_furniture", "items_household", "items_substances", "items_tools", "items_toys", "locations", "military", "music", "music_theory", "nature", "nature_weather", "occupations", "people", "places", "places_architecture", "places_inside", "planets", "religion", "science", "science_chemistry", "science_physics", "shapes", "sports", "time", "travel", "vehicles"],
-    defaultCategories: ["animals", "food", "places", "items"],
-    allLevels: ["core", "easy", "medium", "hard", "hardcore"],
-    defaultLevel: ["easy"],
-    allTypes: ["nouns", "geography", "names", "adjectives", "verbs", "adverbs"],
-    defaultType: ["nouns"],
+    allCategories = Array.from(ALL_CATEGORIES) as string[]
+    defaultCategories = ["animals", "food", "places", "items"]
+    allLevels = ["core", "easy", "medium", "hard", "hardcore"]
+    defaultLevel = ["easy"]
+    allTypes = ["nouns", "geography", "names", "adjectives", "verbs", "adverbs", "pronouns", "prepositions"]
+    defaultType = ["nouns"]
 
-    defSubcat: "general",
+    defSubcat = "general"
+    listIndex: Record<string,any>;
 
-    getTxtFilePath: function(path, query)
+    getTxtFilePath(path:string, query:Query)
     {
         let fileName = query.cat;
         if(query.subcat.length > 0 && query.subcat != this.defSubcat) { fileName += "_" + query.subcat; }
-
         return path + "/" + query.type + "/" + query.level + "/" + fileName + ".txt";
-    },
+    }
 
-    getJsonFilePath: function(path, _query)
+    getJsonFilePath(path:string, _query:Query = {})
     {
         return path + "/lib-pqWords.json";
-    },
+    }
 
     // @NOTE: Can print this directly to the console with something like
-    // PQ_WORDS.getTotalWordCount().then((res) => console.log(res));
+    // PQ_WORDS.getWordCount().then((res) => console.log(res));
     async getWordCount(allWords = true)
     {
-        if(allWords) { await this.loadWithParams({ "useAll": true, "method": "json" }); }
+        if(allWords) { await this.loadWithParams({ useAll: true, method: "json" }); }
         return this.recursiveWordCount(this.jsonCache);
-    },
+    }
 
     recursiveWordCount(data)
     {
@@ -52,19 +96,19 @@ window.PQ_WORDS = {
             return sum
         }
         return 0;
-    },
+    }
 
-    addToTxtCache: function(key, data)
+    addToTxtCache(key:string, data:WordDataList)
     {
         this.txtCache[key] = data;
-    },
+    }
 
-    hasFileCached: function(key)
+    hasFileCached(key:string)
     {
         return (key in this.txtCache);
-    },
+    }
 
-    constructListFromKeys: function(keys, params)
+    constructListFromKeys(keys:string[], params:LoadParams = {})
     {
         this.list = [];
         for(const key of keys)
@@ -82,15 +126,14 @@ window.PQ_WORDS = {
         }
 
         if(this.list.length <= 0) { console.error("PQ_WORDS: Word list is empty"); }
-    },
+    }
 
     // @IMPROV: is there are more neat/general way to implement this? Also for "convertListToHierarchy"?
-    constructListFromQueries: function(queries, params)
+    constructListFromQueries(queries:Query[], params:LoadParams = {})
     {
         this.list = [];
         for(const query of queries)
         {
-
             const t = query.type, l = query.level, c = query.cat, s = query.subcat;
             if(!this.safeCheckHierarchy(this.jsonCache, [t,l,c,s])) { continue; }
 
@@ -111,7 +154,7 @@ window.PQ_WORDS = {
         }
 
         if(this.list.length <= 0) { console.error("PQ_WORDS: Word list is empty"); }
-    },
+    }
 
     // Checks if all keys we want to access exist (in the given order, hence _hierarchy_)
     // Creates them if `create`=true, otherwise just breaks out
@@ -147,7 +190,7 @@ window.PQ_WORDS = {
             
         }
         return true;
-    },
+    }
 
     setInHierarchy(obj, keys, val)
     {
@@ -157,7 +200,7 @@ window.PQ_WORDS = {
             if(i == (keys.length - 1)) { obj.set(key, val); }
             else { obj = obj.get(key); }
         }
-    },
+    }
 
     getInHierarchy(obj, keys)
     {
@@ -168,7 +211,7 @@ window.PQ_WORDS = {
             obj = obj.get(key);
         }
         return obj;
-    },
+    }
 
     convertListToIndex()
     {
@@ -182,7 +225,7 @@ window.PQ_WORDS = {
             this.setInHierarchy(obj, wordSplit, wordData);
         }
         return obj;
-    },
+    }
 
     convertListToHierarchy()
     {
@@ -196,12 +239,12 @@ window.PQ_WORDS = {
             obj[t][l][c][s].push(actualWord);
         }
         return obj;
-    },
+    }
 
-    getAll: function()
+    getAll()
     {
         return this.list;
-    },
+    }
 
     // "Reverse levenshtein distance"
     // (Generates all strings within distance X from an input string)
@@ -211,7 +254,7 @@ window.PQ_WORDS = {
         if(a == "") { return []; }
         if(fuzziness < 0) { return []; }
         return this.ltDistanceRecursiveReverse(a, a, fuzziness, partials);
-    },
+    }
 
     ltDistanceRecursiveReverse(original, a, fuzziness, partials)
     {
@@ -256,7 +299,7 @@ window.PQ_WORDS = {
         }
 
         return arr.flat();
-    },
+    }
 
 
     // "Levenshtein Distance"
@@ -264,7 +307,7 @@ window.PQ_WORDS = {
     {
         if(Math.abs(a.length - b.length) > fuzziness) { return Infinity; }
         return this.ltDistanceRecursive(a, b, a.length + 1, b.length + 1);
-    },
+    }
 
     ltDistanceRecursive(a,b,i,j)
     {
@@ -277,7 +320,7 @@ window.PQ_WORDS = {
         if(characterNotEqual) { val3 += 1; }
 
         return Math.min(val1, val2, val3);
-    },
+    }
 
     findWord(word, fuzziness = 0, maxMatches = 4)
     {
@@ -304,7 +347,7 @@ window.PQ_WORDS = {
         }
 
         return { success: false, matches: matches }
-    },
+    }
 
     getRandomMultiple(num = 10, remove = false)
     {
@@ -316,9 +359,9 @@ window.PQ_WORDS = {
             arr.push(val);
         }
         return arr;
-    },
+    }
 
-    getRandom: function(remove = false)
+    getRandom(remove = false)
     {
         if(this.list.length <= 0) { return null; }
 
@@ -326,7 +369,7 @@ window.PQ_WORDS = {
         const val = this.list[idx];
         if(remove) { this.list.splice(idx, 1); }
         return val;
-    },
+    }
 
     getAllSubcategories(cat)
     {
@@ -338,14 +381,14 @@ window.PQ_WORDS = {
             arr.push(otherCat);
         }
         return arr;
-    },
+    }
 
-    loadAll: async function()
+    async loadAll()
     {
-        await this.loadWithParams({ "useAll": true, "method": "txt" });
-    },
+        await this.loadWithParams({ useAll: true, method: "txt" });
+    }
 
-    loadWithParams: async function(params = {})
+    async loadWithParams(params:LoadParams = {})
     {
         const path = params.path || "/words";
         if(path.charAt(path.length-1) == "/") { path.slice(0, -1); }
@@ -356,6 +399,7 @@ window.PQ_WORDS = {
             params.types = this.allTypes;
             params.levels = this.allLevels;
             params.categories = this.allCategories;
+            params.useAllSubcat = true;
         }
 
         params.minWordLength = params.minWordLength || 0;
@@ -399,9 +443,16 @@ window.PQ_WORDS = {
             const isTypeException = (type in typeExceptions);
             if(isTypeException) { continue; }
 
+            const relevantCategories = [];
+            for(const cat of categories)
+            {
+                if(!CATEGORIES[type].includes(cat)) { continue; }
+                relevantCategories.push(cat);
+            }
+
             for(const level of levels)
             {
-                for(const cat of categories)
+                for(const cat of relevantCategories)
                 {
                     let mainCat = cat, subCat = this.defSubcat;
                     if(cat.includes("_"))
@@ -426,9 +477,9 @@ window.PQ_WORDS = {
         } else if(method == "txt") {
             await this.loadTxtWithQueries(path, queryList, params);
         }
-    },
+    }
 
-    async loadJsonWithQueries(path, queryList, params)
+    async loadJsonWithQueries(path:string, queryList:Query[], params:LoadParams)
     {
 
         if(!this.jsonFileLoaded())
@@ -437,13 +488,12 @@ window.PQ_WORDS = {
         }
 
         this.constructListFromQueries(queryList, params);
-    },
+    }
 
-    async loadTxtWithQueries(path, queryList, params)
+    async loadTxtWithQueries(path:string, queryList:Query[], params:LoadParams)
     {
-        const promises = [];
+        const promises :Promise<any>[] = [];
         const keys = [];
-        let promise = Promise.resolve();
         for(const query of queryList)
         {
             const filePath = this.getTxtFilePath(path, query);
@@ -456,43 +506,51 @@ window.PQ_WORDS = {
             keys.push(filePath);
 
             if(this.hasFileCached(filePath)) { continue; }
-            promise = promise.then(() => this.loadTxtFile(filePath, data));
+            promises.push(this.loadTxtFile(filePath, data));
         }
 
-        await promise; // Promise.all(promises) would've worked as well, just wanted to learn this other approach
+        await Promise.all(promises);
         this.constructListFromKeys(keys, params);
-    },
+    }
 
-    fileExists: function(url) {
-        var req = new XMLHttpRequest();
-        req.open('HEAD', url, false);
-        req.send();
-        return req.status !== 404;
-    },
-
-    parseTxtFile(data)
+    async fileExists(url:string) 
     {
-        const arr = data.replaceAll("\r", "").split("\n");
+        const req = new XMLHttpRequest();
+        return new Promise((resolve, reject) => {
+            req.open('HEAD', url);
+            req.onerror = () => { resolve(false); }
+            req.onload = () => {
+                resolve(req.status !== 404);
+            };
+            req.send();
+        });        
+    }
+
+    parseTxtFile(data:string)
+    {
+        const arr = data.split(/[\r\n]+/);
+        // this just filters out any empty lines (or too-short-words)
         for(let i = arr.length-1; i >= 0; i--)
         {
             if(arr[i].length >= 2) { continue; }
             arr.splice(i, 1);
         }
         return arr;
-    },
+    }
 
-    loadTxtFile: function(filePath, wordData)
+    async loadTxtFile(filePath:string, wordData:WordDataList)
     {   
         console.log("Checking file at ", filePath);
 
-        if(!this.fileExists(filePath)) { return Promise.resolve(); }
+        const fileExists = await this.fileExists(filePath);
+        if(!fileExists) { return Promise.resolve(); }
 
         const that = this;
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
             xhr.open('GET', filePath);
 
-            xhr.onerror = (ev) => { resolve(false); }
+            xhr.onerror = () => { resolve(false); }
             xhr.onloadend = () => {
                 if(xhr.status == 404) { resolve(false); return; }
                 if(xhr.status == 200) {
@@ -505,10 +563,10 @@ window.PQ_WORDS = {
 
             xhr.send();
         });
-    },
+    }
 
     // @IMPROV: slightly duplicate code compared to loadTxtFile; is it necessary to generalize/merge that?
-    async loadJsonFile(filePath)
+    async loadJsonFile(filePath:string)
     {
         const that = this;
         return new Promise((resolve, reject) => {
@@ -524,18 +582,18 @@ window.PQ_WORDS = {
             };
             xhr.send();
         });
-    },
+    }
     
     jsonFileLoaded()
     {
         return Object.keys(this.jsonCache).length > 0;
-    },
+    }
 
     async getAllAsJSON()
     {
         await this.loadAll();
         console.log(this.convertListToHierarchy());
-    },
+    }
 
     printAllCategories(excludeSubcat = true, joiner = ",")
     {
@@ -547,5 +605,7 @@ window.PQ_WORDS = {
             arr.push(cat);
         }
         return arr.join(joiner);
-    },
+    }
 }
+
+export default PandaqiWords;

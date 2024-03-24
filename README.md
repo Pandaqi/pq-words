@@ -4,7 +4,7 @@ You can see it in effect in a game like [That's Amorphe](https://pandaqi.com/tha
 
 It also powers my [Dictionary Tool](https://pandaqi.com/tools/dictionary/). It's useful when you play one of my word games---like [Keebble](https://pandaqi.com/keebble)---to check _if something is a valid word_. You know, the thing that starts all lively discussions in Scrabble-like games :p
 
-_Current word count: ~6,000_
+_Current word count: ~6,100_
 
 ## What is it?
 
@@ -20,7 +20,7 @@ I split _geography_ and _proper names_ into their own word types. Some players d
 
 Similarly, _pronouns_ and _prepositions_ are their own tiny category. They technically belong to nouns and adverbs, but are pretty useless for most use cases, so I didn't want to include them there by default. (I might change my mind on this once the list is completely done.)
 
-The word types **verbs** and **adjectives** are **not implemented yet**. They will be, when I make my word game that needs them. But there's no clear timeline on that. (@TODO)
+The **verbs** are **not implemented yet**, but they should be done before the end of May 2024.
 
 The **adverbs** category is rather small, with only the most common or irregular ones. Almost all nouns, adjectives and verbs can be _turned into_ an adverb, so I wasn't sure how useful it was to add more.
 
@@ -30,27 +30,27 @@ You can use this any way you like. But it was mostly meant to be used in some di
 
 ### Delivery
 
-You can deliver the words as separate `.txt` files (loaded individually). Or you can use the JSON file that has _all_ data in it.
+You can deliver the words as separate `.txt` files (loaded individually). Or you can use the `lib-pqWords.json` file that has _all_ data in it already.
 
 I've included a small JavaScript file to collect and query them. This "library" is called PQ_WORDS ( = Pandaqi Words). 
 
-* Host the words on your server + the script
+* Host the words on your server + the scripts. (They are coded in TypeScript and to be included as ES6 modules.)
 * First you _load_ the words. (This takes time. It's an _async_ request, wait for it.)
 * Now you can query this list however you like.
 
 Here's an example.
 
-```
+```javascript
 async function getXRandomWords(num)
 {
-  const params = { "useAll": true }
+  const params = { useAll: true }
   await PQ_WORDS.loadWithParams(params);
 	
 	const wordList = PQ_WORDS.getRandomMultiple(num);
-    for(const wordData of wordList)
-    {
-        console.log(wordData.word);
-    }
+  for(const wordData of wordList)
+  {
+    console.log(wordData.word);
+  }
 }
 
 getXRandomWords();
@@ -78,7 +78,7 @@ The most important functions are (all arguments optional) ...
 * `findWord(word, fuzziness, maxMatches)`: finds a word. 
   * Fuzziness means how many characters you may be _off_. The search will "fail", but it provides near-matches. 
 
-Word searching builds an index first to make this fast. It uses simple Levenshtein Distance and is quite rudimentary. (If you want seriously fast lookups, this won't be enough.)
+Word searching builds an index first to make this fast. It uses simple Levenshtein Distance and is quite rudimentary. (If you want seriously fast lookups on huge word lists, this won't do. But in this case it's more than fast enough.)
 
 ### WordData
 
@@ -93,11 +93,11 @@ Words return as a WordData object, with interface ...
 
 ### Creating your own JSON
 
-I used four simple steps. Surely it can be automated further, but I saw no need.
+I used three simple steps. Surely it can be automated further, but I saw no need.
 
 * Call `getAllAsJSON()` on PQ_WORDS => this prints the full word library in your console
 * Right-click and choose "copy object"
-* Paste it inside a JSON file and you're good to go!
+* Paste it inside a JSON file, optionally minify, and you're good to go!
 
 Make sure you right-click the top-level object. Otherwise it'll store whatever sub object you clicked.
 
@@ -166,7 +166,7 @@ After typing the line, it asks you for the necessary info (one at a time): which
 
 If you want to add many words with the same metadata, you can fix those at the start. For example,
 
-```
+```shell
 pqwordshelper -c addword -type nouns -category animals
 ```
 

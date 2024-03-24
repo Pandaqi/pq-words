@@ -52,3 +52,5 @@ support
 synopsis
 thumbnail
 tint
+aspect
+perspective

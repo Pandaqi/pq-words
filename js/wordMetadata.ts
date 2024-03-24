@@ -1,5 +1,11 @@
-export default class WordMetadata {
-    set(type, level, cat, subcat)
+export default class WordMetadata 
+{
+    type: string;
+    level: string;
+    cat: string;
+    subcat: string;
+
+    set(type: string, level: string, cat: string, subcat: string)
     {
         this.type = type;
         this.level = level;

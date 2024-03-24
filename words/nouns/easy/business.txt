@@ -38,4 +38,6 @@ store
 system
 program
 brand
-retail
+wealth
+fortune
+income

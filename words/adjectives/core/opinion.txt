@@ -128,3 +128,5 @@ broken
 long
 sick
 short
+pretty
+gone

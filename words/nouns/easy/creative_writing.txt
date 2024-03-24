@@ -28,3 +28,6 @@ pun
 question mark
 row
 symbol
+writing
+speech
+reading

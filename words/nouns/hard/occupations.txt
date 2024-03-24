@@ -43,3 +43,4 @@ stockholder
 strategist
 supervisor
 used car salesman
+manufacturer

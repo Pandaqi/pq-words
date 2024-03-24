@@ -34,3 +34,6 @@ thumb
 waist
 wisdom tooth
 wrinkle
+anxiety
+emotion
+tension

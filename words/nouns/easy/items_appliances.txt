@@ -9,3 +9,4 @@ oven
 refrigerator
 satellite
 washing machine
+smartphone

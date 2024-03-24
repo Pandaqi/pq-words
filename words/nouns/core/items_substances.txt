@@ -4,3 +4,4 @@ diamond
 paper
 stone
 wood
+dirt

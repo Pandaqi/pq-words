@@ -44,3 +44,4 @@ ragged
 roman style
 serif font
 slab font
+emphasis

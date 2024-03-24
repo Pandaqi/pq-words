@@ -78,3 +78,9 @@ vector
 vendor
 verbiage
 zoning
+guidance
+analysis
+distribution
+development
+advertising
+assistance

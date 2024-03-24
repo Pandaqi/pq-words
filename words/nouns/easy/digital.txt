@@ -42,3 +42,4 @@ user
 voice
 wallpaper
 wireless
+entertainment

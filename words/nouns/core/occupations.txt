@@ -7,6 +7,7 @@ farmer
 musician
 ninja
 photographer
+police
 police officer
 prince
 princess
@@ -18,3 +19,4 @@ teacher
 thief
 witch
 writer
+dancer

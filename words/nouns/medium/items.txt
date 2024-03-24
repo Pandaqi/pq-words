@@ -32,3 +32,5 @@ treasure map
 walking stick
 well cover
 whip
+quantity
+protection

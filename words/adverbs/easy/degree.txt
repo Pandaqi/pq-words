@@ -3,7 +3,4 @@ completely
 entirely
 extremely
 moderately
-especially
-scarcely
-virtually
-exceptionally
+about

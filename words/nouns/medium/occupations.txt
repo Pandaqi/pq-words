@@ -67,3 +67,5 @@ welder
 window washer
 woodward
 zookeeper
+dealer
+inspector

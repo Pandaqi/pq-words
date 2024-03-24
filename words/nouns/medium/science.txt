@@ -14,3 +14,4 @@ midpoint
 perimeter
 safety goggles
 symmetry
+measurement

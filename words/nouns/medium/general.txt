@@ -144,3 +144,17 @@ wag
 punk
 eureka
 backbone
+permission
+reaction
+quantity
+suggestion
+appearance
+description
+communication
+independence
+difficulty
+politics
+courage
+society
+awareness
+knowledge

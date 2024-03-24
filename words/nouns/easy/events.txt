@@ -2,3 +2,5 @@ accident
 birth
 birthday
 wedding
+exam
+election

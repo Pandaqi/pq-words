@@ -73,3 +73,6 @@ double
 pro
 lap
 goodbye
+thanks
+fact
+fiction
