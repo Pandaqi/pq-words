@@ -9,6 +9,7 @@ cheek
 chin
 elbow
 eyebrow
+eyeball
 finger
 first aid
 fist
@@ -28,3 +29,4 @@ tail
 tattoo
 toe
 tooth
+love

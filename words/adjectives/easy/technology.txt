@@ -1,0 +1,14 @@
+central
+chief
+direct
+balanced
+best
+complete
+connected
+constant
+exact
+fixed
+free
+dense
+magnetic
+national

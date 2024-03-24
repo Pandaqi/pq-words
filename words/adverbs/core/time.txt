@@ -1,0 +1,31 @@
+now
+then
+always
+often
+never
+frequently
+rarely
+soon
+recently
+tomorrow
+tonight
+today
+yesterday
+next week
+last week
+briefly
+long
+suddenly
+quickly
+already
+last
+next
+previously
+after
+afterwards
+early
+late
+later
+since
+still
+just

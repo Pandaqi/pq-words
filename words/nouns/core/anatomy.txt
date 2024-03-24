@@ -3,6 +3,7 @@ ear
 eye
 face
 hair
+hand
 heart
 leg
 nose

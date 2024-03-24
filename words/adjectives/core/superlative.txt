@@ -1,0 +1,86 @@
+best
+worst
+least
+most
+furthest
+farthest
+latest
+last
+nearest
+closest
+oldest
+youngest
+heaviest
+lightest
+biggest
+smallest
+shortest
+tallest
+widest
+narrowest
+deepest
+richest
+poorest
+fullest
+emptiest
+highest
+lowest
+hottest
+best-looking
+best-behaved
+fastest
+slowest
+hardest
+softest
+easiest
+earliest
+strongest
+weakest
+cleanest
+dirtiest
+newest
+coldest
+driest
+wettest
+brightest
+darkest
+best-natured
+greatest
+most terrible
+merriest
+saddest
+bravest
+most cowardly
+kindest
+unkindest
+wisest
+most foolish
+fewest
+quickest
+angriest
+most boring
+cheapest
+cleverest
+coldest
+craziest
+crispiest
+cutest
+most expensive
+fittest
+funniest
+hairiest
+happiest
+healthiest
+hungriest
+most interesting
+loudest
+most modern
+nicest
+most popular
+saltiest
+scariest
+softest
+thickest
+most tired
+ugliest
+warmest

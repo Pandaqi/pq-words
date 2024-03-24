@@ -25,6 +25,7 @@ kitten
 koala
 leopard
 lion
+lioness
 lizard
 mole
 monkey
@@ -38,6 +39,7 @@ shark
 starfish
 swan
 tiger
+tigress
 whale
 wolf
 zebra

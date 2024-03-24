@@ -1,0 +1,37 @@
+zero
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+twelve
+thirteen
+fourteen
+fifteen
+sixteen
+seventeen
+eighteen
+nineteen
+twenty
+twentyfive
+thirty
+fourty
+fifty
+sixty
+seventy
+eighty
+ninety
+hundred
+five hundred
+thousand
+five thousand
+ten thousand
+fifty thousand
+million
+billion

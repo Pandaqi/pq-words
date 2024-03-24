@@ -1,0 +1,14 @@
+big
+small
+tiny
+huge
+large
+short
+tall
+wide
+narrow
+average
+broad
+giant
+little
+long

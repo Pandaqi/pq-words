@@ -10,15 +10,19 @@ _Current word count: ~6,000_
 
 * English words
 * Separated by **word type** (nouns, verbs, ...)
-* Then by **complexity** (easy, medium, hard)
+* Then by **complexity** (core, easy, medium, hard, hardcore)
 * And then by **category** (animals, places, occupations, ...)
 * Inside `.txt` files
 
-This is not an exhaustive list. The library will grow as I make more of these games and refine the lists.
+This is not an exhaustive list, but it's big. The library will grow as I make more of these games and refine the lists.
 
-I split _geography_ and _proper names_ into their own word types. Some players don't like having real-life names in games like these, or a project can't use them. Including them with the _nouns_ has more cons than pros. (They are also most likely to be unknown or outdated.)
+I split _geography_ and _proper names_ into their own word types. Some players don't like having real-life names in games like these and many projects can't use them. Including them with the _nouns_ has more cons than pros. (They are also most likely to be unknown or outdated.)
 
-The categories **verbs**, **adjectives** and **adverbs** are **not implemented yet**. They will be, when I make my word game that needs them. But there's no clear timeline on that. (@TODO)
+Similarly, _pronouns_ and _prepositions_ are their own tiny category. They technically belong to nouns and adverbs, but are pretty useless for most use cases, so I didn't want to include them there by default. (I might change my mind on this once the list is completely done.)
+
+The word types **verbs** and **adjectives** are **not implemented yet**. They will be, when I make my word game that needs them. But there's no clear timeline on that. (@TODO)
+
+The **adverbs** category is rather small, with only the most common or irregular ones. Almost all nouns, adjectives and verbs can be _turned into_ an adverb, so I wasn't sure how useful it was to add more.
 
 ## Usage
 

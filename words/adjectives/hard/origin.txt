@@ -1,0 +1,7 @@
+taiga
+boreal
+equatorial
+semiarid
+alpine
+archipelagic
+peninsular

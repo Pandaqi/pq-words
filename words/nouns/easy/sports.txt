@@ -57,3 +57,4 @@ tennis racket
 weight
 winner
 world cup
+yoga

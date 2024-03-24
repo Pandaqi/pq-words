@@ -1,0 +1,16 @@
+indigenous
+aboriginal
+ethnic
+antarctic
+mediterranean
+continental
+insular
+plateau
+savannah
+steppe
+tundra
+wetland
+arid
+subarctic
+territorial
+provincial

@@ -1,0 +1,12 @@
+glum
+frigid
+crabby
+ornery
+bewildered
+combative
+cooperative
+depressed
+disturbed
+exuberant
+jittery
+puzzled

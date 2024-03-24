@@ -1,0 +1,12 @@
+after
+at
+before
+by
+during
+from
+past
+since
+through
+to
+until
+upon

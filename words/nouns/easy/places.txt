@@ -60,3 +60,4 @@ town
 university
 villa
 world
+state

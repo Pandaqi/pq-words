@@ -1,0 +1,12 @@
+wood
+wooden
+metal
+glass
+stone
+steel
+paper
+plastic
+silver
+metal
+metallic
+golden

@@ -1,0 +1,8 @@
+immature
+advanced
+antique
+contemporary
+current
+novel
+stale
+vintage

@@ -1,0 +1,14 @@
+cheerful
+cross
+jolly
+sunny
+tense
+upbeat
+wary
+weary
+amused
+ashamed
+confused
+doubtful
+sore
+uninterested

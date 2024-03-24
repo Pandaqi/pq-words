@@ -1,0 +1,13 @@
+cerulean
+auburn
+avocado
+aquamarine
+chestnut
+citron
+cobalt
+cyan
+emerald
+fuchsia
+khaki
+lime
+magenta

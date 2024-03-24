@@ -1,0 +1,14 @@
+broad
+boxy
+chunky
+compact
+tapered
+pointed
+skinny
+slim
+bulbous
+firm
+circular
+stiff
+skewed
+twisted

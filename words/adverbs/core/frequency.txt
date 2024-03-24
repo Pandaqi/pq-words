@@ -1,0 +1,9 @@
+always
+never
+ever
+usually
+often
+sometimes
+rarely
+once
+twice

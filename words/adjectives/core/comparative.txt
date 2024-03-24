@@ -1,0 +1,86 @@
+better
+worse
+less
+more
+further
+farther
+later
+nearer
+closer
+older
+younger
+heavier
+lighter
+bigger
+smaller
+shorter
+taller
+wider
+narrower
+deeper
+shallower
+richer
+poorer
+fuller
+emptier
+higher
+lower
+hotter
+better-looking
+better-behaved
+faster
+slower
+harder
+softer
+easier
+earlier
+stronger
+weaker
+cleaner
+dirtier
+newer
+colder
+drier
+wetter
+brighter
+darker
+better-natured
+greater
+more terrible
+merrier
+sadder
+braver
+more cowardly
+kinder
+unkinder
+wiser
+more foolish
+fewer
+quicker
+angrier
+more boring
+cheaper
+cleverer
+colder
+crazier
+crispier
+cuter
+more expensive
+fitter
+funnier
+hairier
+happier
+healthier
+hungrier
+more interesting
+louder
+more modern
+nicer
+more popular
+saltier
+scarier
+softer
+thicker
+more tired
+uglier
+warmer

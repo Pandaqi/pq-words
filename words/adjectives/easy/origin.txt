@@ -1,0 +1,13 @@
+nomadic
+regional
+mountainous
+subtropical
+highland
+lowland
+grassland
+temperate
+rainforest
+marshy
+swampy
+volcanic
+colonial
