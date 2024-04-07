@@ -1,1 +1,39 @@
-@TODO (anything that's about moving)
+back out
+bounce
+crawl
+creep
+dance
+dash
+dive
+flee
+flop 
+fly
+glide
+go
+head towards
+hike
+hop
+jog
+jump
+leap
+leg
+move
+pad
+pass
+pop in
+race
+roll
+return
+run
+rush
+shuffle
+skip
+slide
+slip
+sneak
+sprint
+step
+tiptoe
+trip
+travel
+walk

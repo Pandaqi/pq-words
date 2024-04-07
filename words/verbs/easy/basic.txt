@@ -1,0 +1,15 @@
+suggest
+require
+report
+decide
+consider
+remember
+understand
+understood
+include
+provide
+sit down
+stand up
+turn off
+turn on
+throw away

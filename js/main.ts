@@ -9,7 +9,7 @@ const CATEGORIES =
     nouns: ["anatomy", "animals", "animals_birds", "animals_farm", "animals_insects", "animals_pets", "business", "clothes", "colors", "continents", "creative_gaming", "creative_visual", "creative_writing", "digital", "events", "food", "food_beverages", "food_fruit", "food_sweets", "general", "holidays", "items", "items_appliances", "items_furniture", "items_household", "items_substances", "items_tools", "items_toys", "military", "music", "music_theory", "nature", "nature_weather", "occupations", "people", "places", "places_architecture", "places_inside",  "religion", "science", "science_chemistry", "science_physics", "shapes", "sports", "time", "travel", "vehicles"],
     adverbs: ["certainty", "conjunctive", "degree", "frequency", "interrogative", "manner", "place", "relative", "time"],
     adjectives: ["age", "article", "character", "color", "comparative", "demonstrative", "difference", "distributive", "emotions", "material", "numbers", "opinion", "origin", "possessive", "predeterminer", "quantifier", "ranking", "shape", "size", "superlative", "technology","temperature" ],
-    verbs: ["auxiliary", "basic", "dynamic", "intransitive", "linking", "movement", "phrasal", "stative", "transitive"],
+    verbs: ["auxiliary", "basic", "dynamic", "intransitive", "linking", "movement", "phrasal", "stative", "transitive", "communication", "feelings"],
     pronouns: ["pronouns"],
     prepositions: ["movement", "place", "time"]
 }

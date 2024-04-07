@@ -4,7 +4,7 @@ You can see it in effect in a game like [That's Amorphe](https://pandaqi.com/tha
 
 It also powers my [Dictionary Tool](https://pandaqi.com/tools/dictionary/). It's useful when you play one of my word games---like [Keebble](https://pandaqi.com/keebble)---to check _if something is a valid word_. You know, the thing that starts all lively discussions in Scrabble-like games :p
 
-_Current word count: ~6,100_
+_Current word count: ~11,208_
 
 ## What is it?
 
@@ -20,9 +20,9 @@ I split _geography_ and _proper names_ into their own word types. Some players d
 
 Similarly, _pronouns_ and _prepositions_ are their own tiny category. They technically belong to nouns and adverbs, but are pretty useless for most use cases, so I didn't want to include them there by default. (I might change my mind on this once the list is completely done.)
 
-The **verbs** are **not implemented yet**, but they should be done before the end of May 2024.
-
 The **adverbs** category is rather small, with only the most common or irregular ones. Almost all nouns, adjectives and verbs can be _turned into_ an adverb, so I wasn't sure how useful it was to add more.
+
+The **verbs** category is considered done (~1000 of the most common ones), but could see updates. Because of how many darn verbs there are and how unsure I am about the categorization used.
 
 ## Usage
 
